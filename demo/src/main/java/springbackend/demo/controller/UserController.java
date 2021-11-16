@@ -3,6 +3,7 @@ package springbackend.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import springbackend.demo.model.User;
 import springbackend.demo.repository.UserRepository;
 // Pour créer un contrôleur, il suffit de créer une classe et de l’annoter @RestController et de lui affected un point d’accès. Chacune des méthodes aura l’annotation @RequestMapping qui indique quel chemin de l’API la méthode couvre et quelle méthode HTTP lui correspond.
-
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("api/")
 public class UserController {
